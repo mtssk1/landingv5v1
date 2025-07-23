@@ -5,7 +5,7 @@
   <title>TR1PLIC4 TU C4RGA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="refresh" content="25;url=https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -16,7 +16,7 @@
     body {
       background: url("/fondocas.png") no-repeat center center fixed;
       background-size: cover;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Rubik', sans-serif;
       color: white;
       text-align: center;
       padding: 20px;
@@ -28,14 +28,10 @@
     }
 
     #usuario-container {
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
       padding: 14px;
       margin: 12px auto;
       border-radius: 12px;
       font-size: 14px;
-      box-shadow: 0 0 10px rgba(0,255,0,0.3);
       text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     }
 
@@ -65,23 +61,13 @@
       font-size: 32px;
       color: #ffff66;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-      background: rgba(0, 0, 0, 0.45);
-      padding: 16px 12px;
-      border-radius: 16px;
       margin-bottom: 25px;
     }
 
     .subtexto {
       font-size: 18px;
       color: #00ffcc;
-      background: rgba(0,0,0,0.45);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      padding: 12px;
-      border-radius: 12px;
-      margin: 0 auto 25px;
-      width: fit-content;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      margin-bottom: 25px;
     }
 
     .contador {
@@ -124,39 +110,34 @@
   </style>
 </head>
 <body>
-
 <div class="contenedor">
-
   <div id="usuario-container"></div>
   <div class="verificado">✅ PLATAFORMA VERIFICADA ✅</div>
-
   <img class="dado" src="/logo-ar.png" alt="Logo Agencia Royale">
-
   <h1>TR1PLIC4 TU C4RGA YA:<br>C4SINO CON R3TIRO LAS 24HS</h1>
-
   <div class="subtexto">
     Jugá, G4NÁ y R3TIRÁ instantáneamente.<br><br>
-    📍 16.437 personas jug@ndo ahora.
+    📍 <span style="font-family: 'Rubik', sans-serif; font-weight: 500; font-size: 18px;">16.437 personas jug@ndo ahora.</span>
   </div>
-
   <div class="contador" id="timer">⏳ OFERTA CADUCA EN: 00:25</div>
-
   <br>
-
   <a class="boton-wsp" href="https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">TRIPLICAR CARGA AHORA</a>
-
 </div>
 
 <script>
-  const usuarios = [
-    "<div class='usuario'>Juan Morales ✅<br><span>PAGO APROBADO!</span> 💰💰<br>Depósito: $9438 – Retiro: $113256</div>",
-    "<div class='usuario'>Carla Méndez ✅<br><span>RETIRO INSTANTÁNEO!</span> 💰💰<br>Depósito: $8526 – Retiro: $119364</div>"
-  ];
-  let index = 0;
+  const nombres = ["Juan Morales", "Carla Méndez", "Luis Romero", "Ana García", "Pedro Suárez", "Camila López", "Mariano Torres", "Laura Díaz", "Santiago Pérez", "Valentina Ríos", "Bruno Castro", "Martina Herrera", "Agustín Navarro", "Sofía Álvarez", "Lautaro Giménez", "Julieta Molina", "Facundo Ortiz", "Rocío Ramírez", "Benjamín Silva", "Milagros Ferreyra", "Ezequiel Vega", "Lucía Soto", "Thiago Bustos", "Renata Méndez", "Franco Aguirre", "Zoe Morales", "Kevin Ruiz", "Delfina Godoy", "Bautista Sosa", "Isabella Rojas", "Iván Cabrera", "Melina Aguayo", "Nahuel Torres", "Emily Romero", "Gaspar Díaz", "Antonella Paz", "Julián Ávila", "Mía Benítez", "Cristian Núñez", "Candela Álvarez", "Matías Ponce", "Florencia Prado", "Tobías Rey", "Camila Serrano", "Joaquín Ferreyra", "Ámbar Torres", "Alexis Ledesma", "Catalina Varela", "Luciano Funes", "Abril Herrera"];
+
+  function generarUsuario() {
+    const nombre = nombres[Math.floor(Math.random() * nombres.length)];
+    const deposito = Math.floor(Math.random() * 10000 + 3000);
+    const retiro = deposito + Math.floor(Math.random() * 90000 + 20000);
+    const mensaje = Math.random() > 0.5 ? "PAGO APROBADO!" : "RETIRO INSTANTÁNEO!";
+    return `<div class='usuario'>${nombre} ✅<br><span>${mensaje}</span> 💰💰<br>Depósito: $${deposito} – Retiro: $${retiro}</div>`;
+  }
+
   const container = document.getElementById("usuario-container");
   function mostrarUsuario() {
-    container.innerHTML = usuarios[index];
-    index = (index + 1) % usuarios.length;
+    container.innerHTML = generarUsuario();
   }
   mostrarUsuario();
   setInterval(mostrarUsuario, 2500);
@@ -170,6 +151,5 @@
     if (tiempo <= 0) clearInterval(cuentaAtras);
   }, 1000);
 </script>
-
 </body>
 </html>
