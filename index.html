@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TR1PLIC4 TU C4RGA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="25;url=https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">
+  <style>
+    body {
+      margin: 0;
+      background: url("/fondocas.png") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    #usuario-container {
+      background: rgba(255,255,255,0.05);
+      margin: 6px auto;
+      padding: 12px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 10px;
+      font-size: 14px;
+      box-shadow: 0 0 8px rgba(0,255,0,0.2);
+      min-height: 80px;
+    }
+    #usuario-container span {
+      color: #00ff88;
+      font-weight: bold;
+    }
+    .verificado {
+      background: #ffaa00;
+      color: black;
+      font-weight: bold;
+      padding: 10px;
+      margin: 20px auto;
+      width: fit-content;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ffaa00;
+    }
+    .dado {
+      width: 80px;
+      margin: 20px auto;
+    }
+    h1 {
+      font-size: 26px;
+      color: #ffff66;
+      margin-bottom: 25px;
+    }
+    .subtexto {
+      font-size: 18px;
+      color: #00ffcc;
+    }
+    .contador {
+      background: #1a1a1a;
+      padding: 14px;
+      margin: 25px auto;
+      font-size: 18px;
+      color: #ff6060;
+      font-weight: bold;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(255,0,0,0.4);
+    }
+    .boton-wsp {
+      background: #25d366;
+      color: white;
+      font-weight: bold;
+      padding: 16px 34px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 30px;
+      font-size: 20px;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 0 12px #25d366;
+      animation: latido 1.5s infinite;
+    }
+    @keyframes latido {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+  </style>
+</head>
+<body>
+
+<div id="usuario-container"></div>
+<div class="verificado">✅ PLATAFORMA VERIFICADA ✅</div>
+<img class="dado" src="/logo-ar.png" alt="Logo Agencia Royale">
+<h1>TR1PLIC4 TU C4RGA YA:<br>C4SINO CON R3TIRO LAS 24HS</h1>
+<div class="subtexto">Jugá, G4NÁ y R3TIRÁ instantáneamente.<br><br>📍 16.437 personas jug@ndo ahora.</div>
+<div class="contador" id="timer">⏳ OFERTA CADUCA EN: 00:25</div>
+<a class="boton-wsp" href="https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">TRIPLICAR CARGA AHORA</a>
+
+<script>
+  const usuarios = [
+    "<div class='usuario'>Juan Morales ✅<br><span>PAGO APROBADO!</span> 💰💰<br>Depósito: $9438 – Retiro: $113256</div>",
+    "<div class='usuario'>Carla Méndez ✅<br><span>RETIRO INSTANTÁNEO!</span> 💰💰<br>Depósito: $8526 – Retiro: $119364</div>"
+  ];
+  let index = 0;
+  const container = document.getElementById("usuario-container");
+  function mostrarUsuario() {
+    container.innerHTML = usuarios[index];
+    index = (index + 1) % usuarios.length;
+  }
+  mostrarUsuario();
+  setInterval(mostrarUsuario, 2500);
+
+  let tiempo = 25;
+  const timer = document.getElementById("timer");
+  const cuentaAtras = setInterval(() => {
+    tiempo--;
+    const segundos = tiempo < 10 ? "0" + tiempo : tiempo;
+    timer.innerHTML = "⏳ OFERTA CADUCA EN: 00:" + segundos;
+    if (tiempo <= 0) clearInterval(cuentaAtras);
+  }, 1000);
+</script>
+
+</body>
+</html>
