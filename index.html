@@ -7,8 +7,13 @@
   <meta http-equiv="refresh" content="25;url=https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       background: url("/fondocas.png") no-repeat center center fixed;
       background-size: cover;
       font-family: 'Montserrat', sans-serif;
@@ -17,19 +22,21 @@
       padding: 20px;
     }
 
+    .contenedor {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
     #usuario-container {
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      margin: 6px auto;
-      padding: 12px;
-      width: 90%;
-      max-width: 400px;
-      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      padding: 14px;
+      margin: 12px auto;
+      border-radius: 12px;
       font-size: 14px;
-      box-shadow: 0 0 8px rgba(0,255,0,0.3);
-      min-height: 80px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      box-shadow: 0 0 10px rgba(0,255,0,0.3);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     }
 
     #usuario-container span {
@@ -38,69 +45,68 @@
     }
 
     .verificado {
-      background: #ffaa00cc;
+      background: #ffaa00dd;
       color: black;
       font-weight: bold;
-      padding: 10px;
+      padding: 10px 16px;
       margin: 20px auto;
-      width: fit-content;
       border-radius: 12px;
+      width: fit-content;
       box-shadow: 0 0 10px #ffaa00;
     }
 
     .dado {
-      width: 80px;
+      width: 100px;
       margin: 20px auto;
     }
 
     h1 {
       font-family: 'Bebas Neue', cursive;
-      font-size: 34px;
+      font-size: 32px;
       color: #ffff66;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.45);
+      padding: 16px 12px;
+      border-radius: 16px;
       margin-bottom: 25px;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-      background: rgba(0, 0, 0, 0.4);
-      padding: 12px;
-      border-radius: 12px;
-      display: inline-block;
     }
 
     .subtexto {
       font-size: 18px;
       color: #00ffcc;
-      background: rgba(0,0,0,0.3);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      padding: 10px;
-      margin: 20px auto;
-      border-radius: 10px;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      padding: 12px;
+      border-radius: 12px;
+      margin: 0 auto 25px;
       width: fit-content;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
     .contador {
-      background: rgba(26, 26, 26, 0.8);
-      padding: 14px;
-      margin: 25px auto;
+      background: rgba(26, 26, 26, 0.9);
+      padding: 14px 22px;
       font-size: 18px;
       color: #ff6060;
       font-weight: bold;
       border-radius: 12px;
       display: inline-block;
-      box-shadow: 0 0 10px rgba(255,0,0,0.4);
+      margin: 0 auto;
+      box-shadow: 0 0 12px rgba(255,0,0,0.5);
     }
 
     .boton-wsp {
       background: #25d366;
       color: white;
       font-weight: bold;
-      padding: 16px 34px;
+      padding: 16px 36px;
       border: none;
       border-radius: 12px;
-      margin-top: 30px;
       font-size: 20px;
-      text-decoration: none;
+      margin-top: 20px;
       display: inline-block;
+      text-decoration: none;
       box-shadow: 0 0 15px #25d366;
       animation: latido 1.5s infinite;
       transition: transform 0.3s ease;
@@ -114,17 +120,32 @@
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.08); }
     }
+
   </style>
 </head>
 <body>
 
-<div id="usuario-container"></div>
-<div class="verificado">✅ PLATAFORMA VERIFICADA ✅</div>
-<img class="dado" src="/logo-ar.png" alt="Logo Agencia Royale">
-<h1>TR1PLIC4 TU C4RGA YA:<br>C4SINO CON R3TIRO LAS 24HS</h1>
-<div class="subtexto">Jugá, G4NÁ y R3TIRÁ instantáneamente.<br><br>📍 16.437 personas jug@ndo ahora.</div>
-<div class="contador" id="timer">⏳ OFERTA CADUCA EN: 00:25</div>
-<a class="boton-wsp" href="https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">TRIPLICAR CARGA AHORA</a>
+<div class="contenedor">
+
+  <div id="usuario-container"></div>
+  <div class="verificado">✅ PLATAFORMA VERIFICADA ✅</div>
+
+  <img class="dado" src="/logo-ar.png" alt="Logo Agencia Royale">
+
+  <h1>TR1PLIC4 TU C4RGA YA:<br>C4SINO CON R3TIRO LAS 24HS</h1>
+
+  <div class="subtexto">
+    Jugá, G4NÁ y R3TIRÁ instantáneamente.<br><br>
+    📍 16.437 personas jug@ndo ahora.
+  </div>
+
+  <div class="contador" id="timer">⏳ OFERTA CADUCA EN: 00:25</div>
+
+  <br>
+
+  <a class="boton-wsp" href="https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">TRIPLICAR CARGA AHORA</a>
+
+</div>
 
 <script>
   const usuarios = [
