@@ -2,32 +2,36 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>TR1PLIC4 TU C4RGA</title>
+  <title>Triplicá tu carga</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="25;url=https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta http-equiv="refresh" content="25;url=https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20carga">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rubik:wght@400;700&display=swap');
+
     body {
       margin: 0;
       background: url("/fondocas.png") no-repeat center center fixed;
       background-size: cover;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Rubik', sans-serif;
       color: white;
       text-align: center;
       padding: 20px;
     }
+
     #usuario-container {
       margin: 6px auto;
       padding: 12px;
       width: 90%;
       max-width: 400px;
-      border-radius: 10px;
       font-size: 14px;
+      min-height: 80px;
     }
+
     #usuario-container span {
       color: #00ff88;
       font-weight: bold;
     }
+
     .verificado {
       background: #ffaa00;
       color: black;
@@ -38,20 +42,25 @@
       border-radius: 12px;
       box-shadow: 0 0 10px #ffaa00;
     }
+
     .dado {
       width: 80px;
       margin: 20px auto;
     }
+
     h1 {
       font-size: 26px;
       color: #ffff66;
+      font-family: 'Orbitron', sans-serif;
       margin-bottom: 25px;
     }
+
     .subtexto {
-      font-family: 'Poppins', sans-serif;
       font-size: 18px;
       color: #00ffcc;
+      font-family: 'Rubik', sans-serif;
     }
+
     .contador {
       background: #1a1a1a;
       padding: 14px;
@@ -63,6 +72,7 @@
       display: inline-block;
       box-shadow: 0 0 10px rgba(255,0,0,0.4);
     }
+
     .boton-wsp {
       background: #25d366;
       color: white;
@@ -77,6 +87,7 @@
       box-shadow: 0 0 12px #25d366;
       animation: latido 1.5s infinite;
     }
+
     @keyframes latido {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.08); }
@@ -89,34 +100,39 @@
 <div class="verificado">✅ PLATAFORMA VERIFICADA ✅</div>
 <img class="dado" src="/logo-ar.png" alt="Logo Agencia Royale">
 
-<h1>TR1PLIC4 TU C4RGA YA:<br>C4SINO CON R3TIRO LAS 24HS</h1>
+<h1>🔥 Triplicá tu carga ahora mismo 🔥<br>
+Retirá ganancias reales las 24 horas</h1>
 
 <div class="subtexto">
-  Jugá, G4NÁ y R3TIRÁ instantáneamente.<br><br>
-  📍 <span id="jugadores">16.437</span> personas jug@ndo ahora.
+  Jugá, ganá y retirá instantáneamente.<br><br>
+  ✨ Tu suerte no está escrita... pero está cerca de cambiar ✨<br><br>
+  📍 <span id="jugadores">16.437</span> personas están jugando ahora mismo.
 </div>
 
 <div class="contador" id="timer">⏳ OFERTA CADUCA EN: 00:25</div>
-<a class="boton-wsp" href="https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">TRIPLICAR CARGA AHORA</a>
+<a class="boton-wsp" href="https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20carga">TRIPLICAR CARGA AHORA</a>
 
 <script>
-  // Usuarios simulados
-  const nombres = ["Juan", "Carla", "Pedro", "Micaela", "Lucas", "Sofía", "Bruno", "Valentina", "Tomás", "Julieta", "Martín", "Camila", "Nicolás", "Florencia", "Facundo", "Milagros", "Matías", "Agustina", "Benjamín", "Antonella", "Santiago", "Luciana", "Ezequiel", "Ailén", "Emiliano", "Melina", "Franco", "Lara", "Julián", "Rocío", "Alejandro", "Carolina", "Diego", "Candela", "Ramiro", "Celeste", "Federico", "Delfina", "Cristian", "Noelia", "Gonzalo", "Daiana", "Iván", "Brenda", "Axel", "Ariana", "Maxi", "Sol", "Thiago", "Ayelén"];
-  function numeroAleatorio(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  const usuarios = [];
+  const nombres = ["Juan", "Carla", "Lucía", "Mateo", "Romina", "Leo", "Flor", "Tomi", "Nico", "Camila", "Sofía", "Julián", "Brenda", "Marcos", "Valen", "Agus", "Martina", "Nahuel", "Delfi", "Rodri", "Mica", "Fede", "Paula", "Facu", "Lara", "Fran", "Caro", "Eze", "Antonella", "Brian", "Gonza", "Melina", "Ángel", "Rocío", "Bauti", "Sol", "Alan", "Giuliana", "Santi", "Ailén", "Kevin", "Gise", "Tobías", "Vicky", "Agustina", "Charly", "Bruno", "Jazmín", "Lucas", "Juli"];
+
+  for (let i = 0; i < 50; i++) {
+    const nombre = nombres[i % nombres.length];
+    const apellido = ["Pérez", "Gómez", "Ríos", "López", "Fernández", "Molina", "Ramírez", "Díaz", "Martínez", "Silva"][Math.floor(Math.random() * 10)];
+    const deposito = (Math.random() * 5000 + 5000).toFixed(0);
+    const retiro = (deposito * (Math.random() * 9 + 2)).toFixed(0);
+    usuarios.push(`<div class='usuario'>${nombre} ${apellido} ✅<br><span>PAGO APROBADO!</span> 💰💰<br>Depósito: $${deposito} – Retiro: $${retiro}</div>`);
   }
+
+  let index = 0;
   const container = document.getElementById("usuario-container");
   function mostrarUsuario() {
-    const nombre = nombres[Math.floor(Math.random() * nombres.length)];
-    const montoDepo = numeroAleatorio(8000, 11000);
-    const montoRetiro = montoDepo * numeroAleatorio(10, 14);
-    const mensaje = `<div class='usuario'>${nombre} ✅<br><span>PAGO APROBADO!</span> 💰💰<br>Depósito: $${montoDepo} – Retiro: $${montoRetiro}</div>`;
-    container.innerHTML = mensaje;
+    container.innerHTML = usuarios[index];
+    index = (index + 1) % usuarios.length;
   }
   mostrarUsuario();
   setInterval(mostrarUsuario, 2500);
 
-  // Contador
   let tiempo = 25;
   const timer = document.getElementById("timer");
   const cuentaAtras = setInterval(() => {
@@ -126,14 +142,14 @@
     if (tiempo <= 0) clearInterval(cuentaAtras);
   }, 1000);
 
-  // Variación de jugadores
-  const jugadoresSpan = document.getElementById("jugadores");
+  // Jugadores activos (sube y baja)
   let jugadores = 16437;
+  const spanJugadores = document.getElementById("jugadores");
   setInterval(() => {
-    const variación = Math.floor(Math.random() * 8) - 4;
-    jugadores += variación;
+    const variacion = Math.floor(Math.random() * 10 - 5);
+    jugadores += variacion;
     if (jugadores < 16000) jugadores = 16000;
-    jugadoresSpan.textContent = jugadores.toLocaleString("es-AR");
+    spanJugadores.textContent = jugadores.toLocaleString("es-AR");
   }, 3000);
 </script>
 
