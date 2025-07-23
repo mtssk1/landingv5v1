@@ -5,33 +5,40 @@
   <title>TR1PLIC4 TU C4RGA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="refresh" content="25;url=https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       background: url("/fondocas.png") no-repeat center center fixed;
       background-size: cover;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       color: white;
       text-align: center;
       padding: 20px;
     }
+
     #usuario-container {
-      background: rgba(255,255,255,0.05);
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
       margin: 6px auto;
       padding: 12px;
       width: 90%;
       max-width: 400px;
       border-radius: 10px;
       font-size: 14px;
-      box-shadow: 0 0 8px rgba(0,255,0,0.2);
+      box-shadow: 0 0 8px rgba(0,255,0,0.3);
       min-height: 80px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
+
     #usuario-container span {
       color: #00ff88;
       font-weight: bold;
     }
+
     .verificado {
-      background: #ffaa00;
+      background: #ffaa00cc;
       color: black;
       font-weight: bold;
       padding: 10px;
@@ -40,21 +47,39 @@
       border-radius: 12px;
       box-shadow: 0 0 10px #ffaa00;
     }
+
     .dado {
       width: 80px;
       margin: 20px auto;
     }
+
     h1 {
-      font-size: 26px;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 34px;
       color: #ffff66;
       margin-bottom: 25px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 12px;
+      border-radius: 12px;
+      display: inline-block;
     }
+
     .subtexto {
       font-size: 18px;
       color: #00ffcc;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      padding: 10px;
+      margin: 20px auto;
+      border-radius: 10px;
+      width: fit-content;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
+
     .contador {
-      background: #1a1a1a;
+      background: rgba(26, 26, 26, 0.8);
       padding: 14px;
       margin: 25px auto;
       font-size: 18px;
@@ -64,6 +89,7 @@
       display: inline-block;
       box-shadow: 0 0 10px rgba(255,0,0,0.4);
     }
+
     .boton-wsp {
       background: #25d366;
       color: white;
@@ -75,9 +101,15 @@
       font-size: 20px;
       text-decoration: none;
       display: inline-block;
-      box-shadow: 0 0 12px #25d366;
+      box-shadow: 0 0 15px #25d366;
       animation: latido 1.5s infinite;
+      transition: transform 0.3s ease;
     }
+
+    .boton-wsp:hover {
+      transform: scale(1.05);
+    }
+
     @keyframes latido {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.08); }
