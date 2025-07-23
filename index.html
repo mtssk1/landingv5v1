@@ -2,77 +2,77 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Triplicá tu carga</title>
+  <title>TR1PLIC4 TU C4RGA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="25;url=https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20carga">
+  <meta http-equiv="refresh" content="25;url=https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap');
-
     body {
       margin: 0;
       background: url("/fondocas.png") no-repeat center center fixed;
       background-size: cover;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Rubik', sans-serif;
       color: white;
       text-align: center;
       padding: 20px;
     }
-
     #usuario-container {
+      background: rgba(0, 0, 0, 0.8);
       margin: 6px auto;
       padding: 12px;
       width: 90%;
       max-width: 400px;
+      border-radius: 10px;
       font-size: 14px;
+      box-shadow: 0 0 8px rgba(0,255,0,0.2);
       min-height: 80px;
     }
-
     #usuario-container span {
       color: #00ff88;
       font-weight: bold;
     }
-
     .verificado {
       background: #ffaa00;
       color: black;
       font-weight: bold;
-      padding: 10px;
+      padding: 10px 16px;
       margin: 20px auto;
       width: fit-content;
       border-radius: 12px;
       box-shadow: 0 0 10px #ffaa00;
+      font-size: 16px;
     }
-
     .dado {
-      width: 80px;
-      margin: 20px auto;
+      width: 110px;
+      margin: 30px auto 10px;
+      display: block;
     }
-
     h1 {
       font-size: 28px;
       color: #ffff66;
-      font-family: 'Orbitron', sans-serif;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
+      font-weight: 800;
     }
-
     .subtexto {
-      font-size: 18px;
+      font-size: 20px;
       color: #00ffcc;
-      font-family: 'Poppins', sans-serif;
       font-weight: 500;
+      margin-bottom: 20px;
     }
-
-    .jugando {
+    .mensaje-extra {
+      font-size: 16px;
+      color: #00b3b3;
+      margin-bottom: 12px;
+    }
+    .jugadores {
       font-size: 14px;
-      color: #00ffaa;
+      color: #cc66ff;
       opacity: 0.7;
-      margin-top: 10px;
     }
-
     .contador {
       background: #1a1a1a;
       padding: 14px;
-      margin: 25px auto;
+      margin: 25px auto 10px;
       font-size: 18px;
       color: #ff6060;
       font-weight: bold;
@@ -80,7 +80,6 @@
       display: inline-block;
       box-shadow: 0 0 10px rgba(255,0,0,0.4);
     }
-
     .boton-wsp {
       background: #25d366;
       color: white;
@@ -88,14 +87,13 @@
       padding: 16px 34px;
       border: none;
       border-radius: 12px;
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 20px;
       text-decoration: none;
       display: inline-block;
       box-shadow: 0 0 12px #25d366;
       animation: latido 1.5s infinite;
     }
-
     @keyframes latido {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.08); }
@@ -107,31 +105,23 @@
 <div id="usuario-container"></div>
 <div class="verificado">✅ PLATAFORMA VERIFICADA ✅</div>
 <img class="dado" src="/logo-ar.png" alt="Logo Agencia Royale">
-
 <h1>🔥 Triplicá tu carga ahora mismo 🔥<br>Retirá ganancias reales las 24 horas</h1>
-
-<div class="subtexto">
-  Jugá, ganá y retirá instantáneamente.<br><br>
-  ✨ Tu suerte no está escrita... pero está cerca de cambiar ✨
-</div>
-
-<div class="jugando">📍 <span id="jugadores">16.437</span> personas están jugando ahora mismo</div>
-
+<div class="subtexto">Jugá, ganá y retirá instantáneamente.</div>
+<div class="mensaje-extra">✨ Tu suerte no está escrita... pero está cerca de cambiar ✨</div>
+<div class="jugadores" id="jugadores">📍 16.437 personas están jugando ahora mismo</div>
 <div class="contador" id="timer">⏳ OFERTA CADUCA EN: 00:25</div>
-<a class="boton-wsp" href="https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20carga">TRIPLICAR CARGA AHORA</a>
+<a class="boton-wsp" href="https://wa.me/5491171837023?text=Hola%20quiero%20triplicar%20mi%20c4rg4">TRIPLICAR CARGA AHORA</a>
 
 <script>
-  const usuarios = [];
-  const nombres = ["Juan", "Carla", "Lucía", "Mateo", "Romina", "Leo", "Flor", "Tomi", "Nico", "Camila", "Sofía", "Julián", "Brenda", "Marcos", "Valen", "Agus", "Martina", "Nahuel", "Delfi", "Rodri", "Mica", "Fede", "Paula", "Facu", "Lara", "Fran", "Caro", "Eze", "Antonella", "Brian", "Gonza", "Melina", "Ángel", "Rocío", "Bauti", "Sol", "Alan", "Giuliana", "Santi", "Ailén", "Kevin", "Gise", "Tobías", "Vicky", "Agustina", "Charly", "Bruno", "Jazmín", "Lucas", "Juli"];
-
-  for (let i = 0; i < 50; i++) {
-    const nombre = nombres[i % nombres.length];
-    const apellido = ["Pérez", "Gómez", "Ríos", "López", "Fernández", "Molina", "Ramírez", "Díaz", "Martínez", "Silva"][Math.floor(Math.random() * 10)];
-    const deposito = (Math.random() * 5000 + 5000).toFixed(0);
-    const retiro = (deposito * (Math.random() * 9 + 2)).toFixed(0);
-    usuarios.push(`<div class='usuario'>${nombre} ${apellido} ✅<br><span>PAGO APROBADO!</span> 💰💰<br>Depósito: $${deposito} – Retiro: $${retiro}</div>`);
-  }
-
+  const usuarios = Array.from({length: 50}, (_, i) => {
+    const nombres = ['Juan', 'Carla', 'Tomás', 'Lucía', 'Bruno', 'Sofía', 'Pedro', 'Camila', 'Nico', 'Valen'];
+    const apellidos = ['Martínez', 'Gómez', 'Rodríguez', 'López', 'Fernández', 'Pérez'];
+    const nombre = nombres[Math.floor(Math.random() * nombres.length)];
+    const apellido = apellidos[Math.floor(Math.random() * apellidos.length)];
+    const deposito = Math.floor(Math.random() * 5000) + 5000;
+    const retiro = deposito * (Math.floor(Math.random() * 10) + 10);
+    return `<div class='usuario'>${nombre} ${apellido} ✅<br><span>PAGO APROBADO!</span> 💰💰<br>Depósito: $${deposito} – Retiro: $${retiro}</div>`;
+  });
   let index = 0;
   const container = document.getElementById("usuario-container");
   function mostrarUsuario() {
@@ -150,14 +140,13 @@
     if (tiempo <= 0) clearInterval(cuentaAtras);
   }, 1000);
 
-  // Jugadores activos (sube y baja)
-  let jugadores = 16437;
-  const spanJugadores = document.getElementById("jugadores");
+  // Simulación de jugadores activos en vivo
+  const jugadores = document.getElementById("jugadores");
+  let base = 16437;
   setInterval(() => {
     const variacion = Math.floor(Math.random() * 10 - 5);
-    jugadores += variacion;
-    if (jugadores < 16000) jugadores = 16000;
-    spanJugadores.textContent = jugadores.toLocaleString("es-AR");
+    base = Math.max(16000, base + variacion);
+    jugadores.innerText = `📍 ${base.toLocaleString('es-AR')} personas están jugando ahora mismo`;
   }, 3000);
 </script>
 
